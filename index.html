@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Meu Portfólio</h1>
+            <ul>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <img src="ce.jpg" alt="Minha Foto" class="profile-pic">
+            <h2>Olá, sou Arthur Reis</h2>
+            <p>Front-End Developer tentando ser Full-Stack</p>
+            <a href="#projects" class="btn">Veja Meus Projetos</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>História</h3>
+                <p>Tenho 23 anos e descobri minha paixão pela programação através de um amigo. Fui apresentado ao mundo
+                    do código e rapidamente me encantei pelas possibilidades que ele oferece. Desde então, decidi seguir
+                    essa paixão e me matriculei em um curso técnico, seguido pela faculdade. Cada passo dessa jornada
+                    tem sido uma oportunidade de aprendizado e crescimento, e estou constantemente buscando expandir
+                    meus conhecimentos e habilidades no campo da programação.</p>
+            </div>
+            <div class="card">
+                <h3>Habilidades</h3>
+                <p>Tenho conhecimento básico a intermediário em diversas linguagens e tecnologias essenciais para o
+                    desenvolvimento web e software. Estou familiarizado com JavaScript, utilizando-o principalmente para
+                    interações dinâmicas em páginas web. Tenho conhecimento básicos com React.js, onde desenvolvo
+                    interfaces de usuário responsivas e eficientes. Em relação ao backend, possuo conhecimentos básicos
+                    em PHP para o desenvolvimento de funcionalidades server-side. Além disso, tenho experiência básica
+                    com Java, utilizado para desenvolvimento de aplicações e lógica de programação mais complexa. Em
+                    relação a bancos de dados, já trabalhei com MySQL e o XAMPP para armazenamento e consulta de dados
+                    estruturados. Recentemente, comecei a explorar o Tailwind CSS para agilizar o processo de
+                    estilização de páginas web.</p>
+            </div>
+            <div class="card">
+                <h3>Interesses</h3>
+                <p>Estou muito interessado em consolidar minha carreira na área de desenvolvimento web. Atualmente,
+                    estou começando minha jornada como freelancer para adquirir mais experiência prática e conhecimentos
+                    diversificados. Tenho paixão por aprender novas tecnologias e enfrentar desafios complexos no
+                    desenvolvimento de software. Estou especialmente focado em expandir meu conhecimento em
+                    desenvolvimento front-end e back-end, além de aprimorar minhas habilidades em design e usabilidade.
+                    </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projetos</h2>
+        <div class="project">
+            <h3>Projeto 1 - Concevêncio saúde+</h3>
+            <p>Um guia completo para escolher o plano de saúde ideal, oferecendo comparação de planos, consultoria
+                personalizada e informações sobre coberturas. Fique por dentro das últimas novidades e dicas no setor de
+                seguros de saúde.</p>
+            <a href=" https://friarthur.github.io/plan-saude/" class="btn">Ver Projeto</a>
+        </div>
+
+        <div class="project">
+            <h3>Projeto 2 - Web Cars</h3>
+            <p>Site dedicado a oferecer informações e serviços relacionados a carros, incluindo venda de carros novos e
+                usados, serviços automotivos e comparação de modelos. Fique atualizado com as últimas notícias e dicas
+                do setor automotivo.</p>
+            <a href="https://friarthur.github.io/web-carss/" class="btn">Ver Projeto</a>
+        </div>
+
+        <div class="project">
+            <h3>Projeto 3 - Gestao de vendas</h3>
+            <p>Plataforma especializada em soluções avançadas para empresas, oferecendo CRM, automação de vendas e
+                analytics. O objetivo é otimizar operações comerciais para alcançar melhores resultados.</p>
+            <a href="https://friarthur.github.io/Gestao-de-vendas/" class="btn">Ver Projeto</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form action="mailto:arthurfriburgo234@gmail.com.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+    
+
+    <div class="chat-box" id="chatBox">
+        <button class="close-btn" onclick="toggleChat()">Fechar</button>
+        <div class="chat-container">
+          <div class="chat-msg">Olá, como posso te ajudar?</div>
+          <div class="chat-options">
+            <button class="chat-option" onclick="toggleSubMenu('redes-sociais')">Redes Sociais</button>
+            <div class="submenu" id="redes-sociais">
+              <button onclick="openLink('https://github.com/friarthur')" class="chat-option">GitHub</button>
+              <button onclick="openLink('https://www.linkedin.com/in/arthur-reis-225948234/')" class="chat-option">LinkedIn</button>
+              <button onclick="openLink('https://www.instagram.com/ar7hurr_022/')" class="chat-option">Instagram</button>
+            </div>
+            <button class="chat-option" onclick="toggleSubMenu('contato')">Contatar para Serviços</button>
+            <div class="submenu" id="contato">
+              <button onclick="openLink('mailto:arthurfriburgo234@gmail.com')" class="chat-option">Email</button>
+              <button onclick="openLink('https://wa.me/5551983172705')" class="chat-option">WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Botão flutuante -->
+      <div class="chat-btn" id="chatBtn" onclick="toggleChat()">
+        <span class="chat-btn-text">Chat</span>
+      </div>
+      
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Arthur Reis Mendes. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
